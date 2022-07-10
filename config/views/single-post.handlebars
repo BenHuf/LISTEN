@@ -1,0 +1,22 @@
+<div class="row justify-content-center">
+    {{> post-info post}}
+
+    {{>comments post.comments}}
+
+    {{#if loggedIn}}
+    <form class="comments col-6 text-center m-4 p-2 comment-form">
+        <div>
+            <textarea name="comment-body"></textarea>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="post-btn">Add Comment</button>
+            <button type="button" class="upvote-btn">upvote</button>
+        </div>
+    </form>
+    {{/if}}
+</div>
+{{!-- {{#if loggedIn}}
+<script src="./public/javascript/comment.js"></script>
+<script src="./public/javascript/vote.js"></script>
+{{/if}} --}}
